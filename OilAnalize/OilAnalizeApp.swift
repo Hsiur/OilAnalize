@@ -8,10 +8,14 @@
 import SwiftUI
 
 @main
-struct OilAnalizeApp: App {
+struct MapAppApp: App {
+    
+    @StateObject private var vm = LocationViewModel()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(vm)
         }
     }
 }
